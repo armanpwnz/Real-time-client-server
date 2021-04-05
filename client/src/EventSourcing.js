@@ -24,12 +24,14 @@ const EventSourcing = () => {
     })
   }
 
+  const onChange = (e) => setValue(e.target.value)
+
   return (
     <div className="center">
       <div>
         <div className="form">
-          <input value={value} onChange={(e) => setValue(e.target.value)} type="text" />
-          <button onClick={sendMessage}>Отправить</button>
+          <input value={value} onChange={onChange} type="text" />
+          <button onClick={sendMessage}>Send</button>
         </div>
         <div className="messages">
           {messages.map((mess) => (
