@@ -1,8 +1,14 @@
 import React from 'react'
 import './app.css'
+import LongPolling from './LongPolling'
+import EventSourcing from './EventSourcing'
 
 function App() {
-  return <div>asd</div>
+  return (
+    <div>
+      <EventSourcing />
+    </div>
+  )
 }
 
 export default App
